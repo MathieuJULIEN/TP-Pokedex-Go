@@ -1,0 +1,25 @@
+{
+    "pokedex_id": 25,
+    "category": "Pokémon Souris",
+    "name": {
+        "fr": "Pikachu",
+        "en": "Pikachu"
+    },
+    "sprites": {
+        "regular": "https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/25/regular.png"
+    },
+    "types": [
+        {
+            "name": "Électrik",
+            "image": "https://raw.githubusercontent.com/Yarkis01/TyraDex/images/types/electrik.png"
+        }
+    ],
+    "stats": {
+        "hp": 45,
+        "atk": 80,
+        "def": 50,
+        "spe_atk": 75,
+        "spe_def": 60,
+        "vit": 120
+    }
+}
