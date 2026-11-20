@@ -1,12 +1,12 @@
 package models
 
 type Pokemon struct {
-	PokedexId int    `json:"pokedex_id"`
-	Category  string `json:"category"`
-	Name      Name   `json:"name"`
-	Sprite    Sprite `json:"sprite"`
-	Types     Types  `json:"types"`
-	Stats     Stats  `json:"stats"`
+	PokedexId int     `json:"pokedex_id"`
+	Category  string  `json:"category"`
+	Name      Name    `json:"name"`
+	Sprite    Sprite  `json:"sprite"`
+	Types     []Types `json:"types"`
+	Stats     Stats   `json:"stats"`
 }
 
 type Name struct {
@@ -24,10 +24,10 @@ type Types struct {
 }
 
 type Stats struct {
-	Hp     string `json:"hp"`
-	Atk    string `json:"atk"`
-	Def    string `json:"def"`
-	SpeAtk string `json:"spe_atk"`
-	SpeDef string `json:"spe_def"`
-	Vit    string `json:"vit"`
+	Hp     int `json:"hp"`
+	Atk    int `json:"atk"`
+	Def    int `json:"def"`
+	SpeAtk int `json:"spe_atk"`
+	SpeDef int `json:"spe_def"`
+	Vit    int `json:"vit"`
 }
