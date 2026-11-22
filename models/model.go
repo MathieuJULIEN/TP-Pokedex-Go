@@ -4,7 +4,7 @@ type Pokemon struct {
 	PokedexId int     `json:"pokedex_id"`
 	Category  string  `json:"category"`
 	Name      Name    `json:"name"`
-	Sprite    Sprite  `json:"sprite"`
+	Sprites   Sprites `json:"sprites"`
 	Types     []Types `json:"types"`
 	Stats     Stats   `json:"stats"`
 }
@@ -14,7 +14,7 @@ type Name struct {
 	En string `json:"en"`
 }
 
-type Sprite struct {
+type Sprites struct {
 	Regular string `json:"regular"`
 }
 

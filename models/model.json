@@ -5,7 +5,7 @@
         "fr": "Pikachu",
         "en": "Pikachu"
     },
-    "sprite": {
+    "sprites": {
         "regular": "https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/25/regular.png"
     },
     "types": [
