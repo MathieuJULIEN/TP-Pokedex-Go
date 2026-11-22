@@ -2,11 +2,13 @@
 {{template "header" "Pokedex"}}
     <h1>Pokedex :</h1>
     <div>
-            <li class="all-buton-sommaire">
-                {{range .}}
-                <ul><a href="/pokemon/{{.Id}}" class="pokemon-list"><img src="{{.sprites.regular}}" alt="{{.name.fr}}"> </a></ul>
-                {{end}}
+        <ul class="all-buton-sommaire">
+            {{range .}}
+            <li>
+                <a href="/pokemon/{{.PokedexId}}" class="pokemon-list"><img src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}"> </a>
             </li>
-        </div>
+            {{end}}
+        </ul>
+    </div>
 {{template "footer"}}
 {{end}}

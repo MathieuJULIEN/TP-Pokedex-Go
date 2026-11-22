@@ -3,10 +3,10 @@ package main
 import (
 	"TP-Pokedex-Go/api"
 	"bytes"
+	"html/template"
 	"log"
 	"net/http"
 	"strconv"
-	"text/template"
 )
 
 var _temp = template.Must(template.ParseGlob("./templates/*.html"))
