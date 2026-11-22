@@ -3,9 +3,10 @@
     <h1>Pokedex :</h1>
     <div>
         <ul class="all-buton-sommaire">
-            {{range .}}
+            {{range (slice . 1)}}
             <li>
-                <a href="/pokemon/{{.PokedexId}}" class="pokemon-list"><img src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}"> </a>
+                {{.Name.Fr}}
+                <a href="/pokemon/{{.PokedexId}}" class="pokemon-list"><img class="img-pokemon" src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}"> </a>
             </li>
             {{end}}
         </ul>

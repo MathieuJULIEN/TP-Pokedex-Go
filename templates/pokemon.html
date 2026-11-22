@@ -1,5 +1,22 @@
 {{define "pokemon"}}
 {{template "header" .Name.Fr }}
-    <h2></h2>
+    <h2>{{.Name.Fr}}</h2>
+    <p>
+        <img src="{{.Sprites.Regular}}" alt="{{.Name}}">
+        Nom Français : {{.Name.Fr}}
+        <br>Nom Anglais : {{.Name.En}}
+    </p>
+    {{range .Types}}
+    <img src="{{.Image}}" alt="{{.Name}}">{{.Name}}<br>
+    {{end}}
+    <br>Statistiques :
+    <ul>
+        <li>HP : {{.Stats.Hp}}</li>
+        <li>Attack : {{.Stats.Atk}}</li>
+        <li>Defense : {{.Stats.Def}}</li>
+        <li>Sepcial Attack : {{.Stats.SpeAtk}}</li>
+        <li>Special Defense : {{.Stats.SpeDef}}</li>
+        <li>Speed : {{.Stats.Vit}}</li>
+    </ul>
 {{template "footer"}}
 {{end}}
