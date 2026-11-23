@@ -1,21 +1,32 @@
 body {
     display: flex;
-    text-shadow: 1px 1px 1px #000;
+    flex-direction: column;
+}
+
+main {
+    padding: 20px;
 }
 
 .header {
     color: #f5f5f5;
     background-color: #333;
+    padding: 10px;
 }
 
 .title-header {
-
+    font-size: 30px;
 }
 
 .all-buton-header {
-
+    background-color: #666;
 }
 
 .footer {
     background-color: #333;
+    color: #f5f5f5;
+    padding: 10px;
+}
+
+.list-pokemon {
+    gap: 16px;
 }
