@@ -1,16 +1,19 @@
 {{define "pokemon"}}
 {{template "header" .Name.Fr }}
-    <h2>{{.Name.Fr}}</h2>
+    <h1>{{.Name.Fr}}</h1>
     <p>
+        Catégorie : {{.Category}}<br>
         <img src="{{.Sprites.Regular}}" alt="{{.Name}}">
-        Nom Français : {{.Name.Fr}}
+        <br>Nom Français : {{.Name.Fr}}
         <br>Nom Anglais : {{.Name.En}}
     </p>
-    {{range .Types}}
-    <img src="{{.Image}}" alt="{{.Name}}">{{.Name}}<br>
-    {{end}}
+    <div class="liste-types">
+        {{range .Types}}
+        <img src="{{.Image}}" alt="{{.Name}}">{{.Name}}<br>
+        {{end}}
+    </div>
     <br>Statistiques :
-    <ul>
+    <ul class="liste-stats">
         <li>HP : {{.Stats.Hp}}</li>
         <li>Attack : {{.Stats.Atk}}</li>
         <li>Defense : {{.Stats.Def}}</li>

@@ -2,11 +2,11 @@
 {{template "header" "Pokedex"}}
     <h1>Pokedex :</h1>
     <div>
-        <ul class="all-buton-sommaire">
+        <ul class="liste-pokemon">
             {{range (slice . 1)}}
-            <li>
-                {{.Name.Fr}}
+            <li class="pokemon">
                 <a href="/pokemon/{{.PokedexId}}" class="pokemon-list"><img class="img-pokemon" src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}"> </a>
+                <br>{{.Name.Fr}}
             </li>
             {{end}}
         </ul>
