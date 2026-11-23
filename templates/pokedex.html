@@ -3,13 +3,13 @@
     <h1>Pokedex :</h1>
     <div class="contenu">
         <search>
-            <form action="/search" method="get">
+            <form action="/pokedex" method="get">
                 <input type="search" placeholder="Rechercher.." name="search" required>
                 <button type="submit"><img src="/static/icons/fleche-envoi.png" alt="fleche d'envoi" height="17"></button>
             </form>
         </search>
         <ul class="liste-pokemon">
-            {{range (slice . 1)}}
+            {{range .}}
             <li class="pokemon">
                 <a href="/pokemon/{{.PokedexId}}" class="pokemon-list"><img class="img-pokemon" src="{{.Sprites.Regular}}" alt="{{.Name.Fr}}"> </a>
                 <br>{{.Name.Fr}}

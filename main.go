@@ -2,11 +2,13 @@ package main
 
 import (
 	"TP-Pokedex-Go/api"
+	"TP-Pokedex-Go/models"
 	"bytes"
 	"html/template"
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 var _temp = template.Must(template.ParseGlob("./templates/*.html"))
@@ -58,7 +60,23 @@ func PokedexHendler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Erreur", http.StatusNotFound)
 		return
 	}
-	renderTemplate(w, "pokedex", pokemon)
+	search := strings.TrimSpace(r.URL.Query().Get("search"))
+	renderTemplate(w, "pokedex", SearchPokemon(pokemon, search))
+}
+
+func SearchPokemon(list []models.Pokemon, search string) []models.Pokemon {
+	search = strings.ToLower(search)
+	recherche := []models.Pokemon{}
+	for _, tempo := range list {
+		if tempo.PokedexId == 0 {
+			continue
+		}
+		nom := strings.ToLower(tempo.Name.Fr)
+		if strings.Contains(nom, search) == true {
+			recherche = append(recherche, tempo)
+		}
+	}
+	return recherche
 }
 
 func PokedexByHendler(w http.ResponseWriter, r *http.Request) {
