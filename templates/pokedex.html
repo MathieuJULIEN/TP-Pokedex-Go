@@ -1,7 +1,13 @@
 {{define "pokedex"}}
 {{template "header" "Pokedex"}}
     <h1>Pokedex :</h1>
-    <div>
+    <div class="contenu">
+        <search>
+            <form action="/search" method="get">
+                <input type="search" placeholder="Rechercher.." name="search" required>
+                <button type="submit"><img src="/static/icons/fleche-envoi.png" alt="fleche d'envoi" height="17"></button>
+            </form>
+        </search>
         <ul class="liste-pokemon">
             {{range (slice . 1)}}
             <li class="pokemon">
